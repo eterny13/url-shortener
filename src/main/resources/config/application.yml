@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/urlShortener?allowPublicKeyRetrieval=true&useSSL=false
+    username: urlShortener
+    password: urlShortener
+
+  jooq:
+    sql-dialect: mysql
+
+  flyway:
+    enabled: false

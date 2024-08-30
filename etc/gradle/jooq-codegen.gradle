@@ -1,0 +1,24 @@
+jooq {
+    configuration {
+        jdbc {
+            url = "jdbc:mysql://localhost:3306/urlShortener"
+            user = "urlShortener"
+            password = "urlShortener"
+        }
+        generator {
+            name = 'org.jooq.codegen.DefaultGenerator'
+            database {
+                name = 'org.jooq.meta.mysql.MySQLDatabase'
+                inputSchema = 'urlShortener'
+            }
+            generate {
+                pojos = true
+                interfaces = true
+            }
+            target {
+                packageName = 'com.example.generated.db'
+                directory = "src/main/java/"
+            }
+        }
+    }
+}
