@@ -18,4 +18,8 @@ public class FixtureUrlTransformation {
                 )
         );
     }
+
+    public static Option<UrlTransformation> none() {
+        return Option.none();
+    }
 }

@@ -24,6 +24,9 @@ jobs:
       - name: Build mysql
         run: docker compose -f etc/docker/docker-compose-mysql.yml up -d
 
+      - name: flyway Migration
+        run: ./gradlew flywayMigrate
+
       - name: Build with Gradle Wrapper
         run: ./gradlew build
 
